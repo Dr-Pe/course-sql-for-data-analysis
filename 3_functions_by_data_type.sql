@@ -1,4 +1,9 @@
 -- Databricks notebook source
+-- MAGIC %md
+-- MAGIC III. Functions By Data Type
+
+-- COMMAND ----------
+
 -- Numeric functions
 
 WITH 

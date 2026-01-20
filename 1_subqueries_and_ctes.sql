@@ -1,5 +1,9 @@
 -- Databricks notebook source
----------------------
+-- MAGIC %md
+-- MAGIC I. Subqueries and CTEs
+
+-- COMMAND ----------
+
 -- Basic joins
 
 SELECT p.product_id, p.product_name, o.product_id AS product_id_in_orders
@@ -10,7 +14,6 @@ WHERE o.product_id IS NULL;
 
 -- COMMAND ----------
 
----------------------
 -- Self joins
 
 SELECT
@@ -27,7 +30,6 @@ ORDER BY price_diff DESC;
 
 -- COMMAND ----------
 
----------------------
 -- Subqueries in the SELECT clause
 
 SELECT
@@ -41,7 +43,6 @@ ORDER BY unit_price DESC;
 
 -- COMMAND ----------
 
----------------------
 -- Subqueries in the FROM clause
 
 SELECT
@@ -54,7 +55,6 @@ FROM products p
 
 -- COMMAND ----------
 
----------------------
 -- Subqueries in the WHERE clause
 
 SELECT product_id, product_name,  factory, division, unit_price
@@ -63,7 +63,6 @@ WHERE unit_price < (SELECT MIN(unit_price) FROM products WHERE factory LIKE 'Wic
 
 -- COMMAND ----------
 
----------------------
 -- CTEs
 
 WITH oitas AS (
@@ -83,7 +82,6 @@ WHERE total_amount_spent > 200;
 
 -- COMMAND ----------
 
----------------------
 -- Multiple CTEs
 
 WITH 

@@ -1,5 +1,9 @@
 -- Databricks notebook source
----------------------
+-- MAGIC %md
+-- MAGIC II. Window Functions
+
+-- COMMAND ----------
+
 -- Window functions
 
 SELECT customer_id, order_id, order_date, transaction_id,
@@ -8,7 +12,6 @@ FROM orders;
 
 -- COMMAND ----------
 
----------------------
 -- Row numbering
 
 SELECT order_id, product_id, units,
@@ -18,7 +21,6 @@ ORDER BY order_id, product_rank;
 
 -- COMMAND ----------
 
----------------------
 -- Value within a window
 
 SELECT order_id, product_id, units
@@ -31,7 +33,6 @@ WHERE dense_rank = 2;
 
 -- COMMAND ----------
 
----------------------
 -- Value relative to a row
 
 WITH cot_orders AS (
