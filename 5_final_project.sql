@@ -211,15 +211,15 @@ ORDER BY teamID;
 -- c) How have average height and weight at debut game changed over the years, and what's the decade-over-decade difference?
 
 WITH avg_w_h_at_debut (
-  SELECT YEAR(debut) AS debut_year, 
+  SELECT FLOOR(YEAR(debut) / 10) * 10 AS decade, 
     ROUND(AVG(weight)) AS avg_weight,
     ROUND(AVG(height)) AS avg_height
   FROM players
   WHERE debut IS NOT NULL
-  GROUP BY debut_year
+  GROUP BY decade
 )
 SELECT *,
-  avg_weight - LAG(avg_weight, 10) OVER (ORDER BY debut_year) AS decade_diff_weight,
-  avg_height - LAG(avg_height, 10) OVER (ORDER BY debut_year) AS decade_diff_height
+  avg_weight - LAG(avg_weight) OVER (ORDER BY decade) AS decade_diff_weight,
+  avg_height - LAG(avg_height) OVER (ORDER BY decade) AS decade_diff_height
 FROM avg_w_h_at_debut
-ORDER BY debut_year;
+ORDER BY decade;
