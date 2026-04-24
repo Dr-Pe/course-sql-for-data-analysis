@@ -1,4 +1,4 @@
-# SQL for Data Analysis
+# Course: SQL for Data Analysis
 ## Advanced SQL querying techniques
 This repository contains my solutions to the exercises from the hands-on, project-based course **SQL for Data Analysis: Advanced SQL Querying Techniques**.
 The goal is to practice and showcase advanced SQL concepts applied to common data analysis scenarios.
