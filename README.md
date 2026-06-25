@@ -9,3 +9,5 @@ The **data** folder contains the SQL statements needed to create and populate in
 You can run the queries in any SQL RDBMS, with minor adjustments if needed. All notebooks were created and executed on the **Databricks SQL enviroment**.
 
 _This project is shared for learning purposes. Feel free to explore and adapt the queries._
+
+<img width="1600" height="1190" alt="certificate_of_completion" src="https://github.com/user-attachments/assets/3321457a-5f90-4c7d-b178-03f18c774c71" />
